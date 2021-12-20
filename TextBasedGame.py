@@ -220,7 +220,7 @@ def main():
                 next_room_location = rv_list[2]
 
             elif p_direction == 'Item':
-                room_item = "Imperial Shield"
+                room_item = "Shadow Power"
                 if room_item not in inventory:
                     p_items_count += 1
                     inventory.append(room_item)
@@ -248,7 +248,7 @@ def main():
                 next_room_location = rv_list[3]
 
             elif p_direction == 'Item':
-                room_item = "Imperial Shield"
+                room_item = "Shadow Cloak"
                 if room_item not in inventory:
                     p_items_count += 1
                     inventory.append(room_item)
@@ -272,23 +272,26 @@ def main():
         elif current_room == keys[5]:
 
             if p_direction == 'East':
-                if rooms_count <= 5:
+                if rooms_count >= 3 and rooms_count <=5:
                     rooms_count += 1
+                    current_room = keys[6]
+                    next_room_location = rv_list[6]
+                else:
                     current_room = keys[6]
                     next_room_location = rv_list[6]
 
             elif p_direction == 'South':
-                    current_room = keys[6]
-                    next_room_location = rv_list[6]
+                    current_room = keys[2]
+                    next_room_location = rv_list[2]
 
             elif p_direction == 'Item':
-                room_item = "Imperial Shield"
+                room_item = "War Sword"
                 if room_item not in inventory:
                     p_items_count += 1
                     inventory.append(room_item)
                     print('Item', inventory)
                 else:
-                    print('\nSorry! This item has already been collected!\n'))
+                    print('\nSorry! This item has already been collected!\n')
 
             elif p_direction == 'I':                    # if user input is I proceeds to inventory menu as a room
                 print('\nA shadow portal opens and swallows you, you have entered a a room of you collections!\n')
@@ -309,7 +312,7 @@ def main():
                 next_room_location = rv_list[5]
 
             elif p_direction == 'Item':
-                room_item = "Imperial Shield"
+                room_item = "Dark Magical Cloth"
                 if room_item not in inventory:
                     p_items_count += 1
                     inventory.append(room_item)

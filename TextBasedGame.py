@@ -88,10 +88,14 @@ def main():
 
         ## ~~ Room 1 index[0] - Checks if player in room 1
         if current_room == keys[0]:
-            if p_direction in next_room_location:       # if player input direction is correct by being inside the rooms
-                rooms_count += 1
-                current_room = keys[1]                  # dictionary?, then the current room becomes the next room by
-                next_room_location = rv_list[1]         # re-assigning the variables to the new library list index
+            if p_direction == "South": 
+                if rooms_count == 1:      # if player input direction is correct by being inside the rooms
+                    rooms_count += 1
+                    current_room = keys[1]                  # dictionary?, then the current room becomes the next room by
+                    next_room_location = rv_list[1]
+                else:
+                    current_room = keys[1]                  # dictionary?, then the current room becomes the next room by
+                    next_room_location = rv_list[1]        # re-assigning the variables to the new library list index
 
             elif p_direction == 'I':                    # if user input is I proceeds to inventory menu as a room
                 print('\nA shadow portal opens and swallows you, you have entered a a room of you collections!\n')
@@ -118,11 +122,6 @@ def main():
                     next_room_location = rv_list[2]
 
             elif p_direction == 'North':                 # Checks for next room direction from user input
-                if rooms_count <= 2:
-                    rooms_count += 1
-                    current_room = keys[2]
-                    next_room_location = rv_list[2]
-                else:
                     current_room = keys[0]
                     next_room_location = rv_list[0]
 
@@ -134,7 +133,7 @@ def main():
                     print('Item', inventory)
 
                 else:
-                    print('Sorry! This item has already been collected!')
+                    print('\nSorry! This item has already been collected!\n')
 
             elif p_direction == 'I':                    # if user input is I proceeds to inventory menu as a room
                 print('\nA shadow portal opens and swallows you, you have entered a a room of you collections!\n')
@@ -191,7 +190,7 @@ def main():
                     inventory.append(room_item)
                     print('Item', inventory)
                 else:
-                    print('Sorry! This item has already been collected!')
+                    print('\nSorry! This item has already been collected!\n')
 
             elif p_direction == 'I':                    # if user input is I proceeds to inventory menu as a room
                 print('\nA shadow portal opens and swallows you, you have entered a a room of you collections!\n')
@@ -227,7 +226,7 @@ def main():
                     inventory.append(room_item)
                     print('Item', inventory)
                 else:
-                    print('Sorry! This item has already been collected!')
+                    print('\nSorry! This item has already been collected!\n')
 
             elif p_direction == 'I':                    # if user input is I proceeds to inventory menu as a room
                 print('\nA shadow portal opens and swallows you, you have entered a a room of you collections!\n')
@@ -255,7 +254,7 @@ def main():
                     inventory.append(room_item)
                     print('Item', inventory)
                 else:
-                    print('Sorry! This item has already been collected!')
+                    print('\nSorry! This item has already been collected!\n')
 
             elif p_direction == 'I':                # if user input is I proceeds to inventory menu as a room
                 print('\nA shadow portal opens and swallows you, you have entered a a room of you collections!\n')
@@ -289,7 +288,7 @@ def main():
                     inventory.append(room_item)
                     print('Item', inventory)
                 else:
-                    print('Sorry! This item has already been collected!')
+                    print('\nSorry! This item has already been collected!\n'))
 
             elif p_direction == 'I':                    # if user input is I proceeds to inventory menu as a room
                 print('\nA shadow portal opens and swallows you, you have entered a a room of you collections!\n')
@@ -316,7 +315,7 @@ def main():
                     inventory.append(room_item)
                     print('Item', inventory)
                 else:
-                    print('Sorry! This item has already been collected!')
+                    print('\nSorry! This item has already been collected!\n')
 
             elif p_direction == 'I':                    # if user input is I proceeds to inventory menu as a room
                 print('\nA shadow portal opens and swallows you, you have entered a a room of you collections!\n')
